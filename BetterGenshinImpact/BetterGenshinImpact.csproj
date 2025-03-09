@@ -52,8 +52,14 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
-		<PackageReference Include="Microsoft.ML.OnnxRuntime.DirectML" Version="1.18.1" />
-		<PackageReference Include="Microsoft.ML.OnnxRuntime.Managed" Version="1.18.1" />
+		<PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.21.0" />
+		<PackageReference Include="Microsoft.ML.OnnxRuntime.DirectML" Version="1.21.0" />
+		<PackageReference Include="Microsoft.ML.OnnxRuntime.Gpu.Windows" Version="1.21.0" />
+		<PackageReference Include="Microsoft.ML.OnnxRuntime.Managed" Version="1.21.0" />
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.3">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
 		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
 		<PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
@@ -77,6 +83,7 @@
 		<PackageReference Include="WPF-UI" Version="3.0.5" />
 		<PackageReference Include="WPF-UI.Tray" Version="3.0.5" />
 		<PackageReference Include="WPF-UI.Violeta" Version="3.0.5.26" />
+		<PackageReference Include="YamlDotNet" Version="16.3.0" />
 		<PackageReference Include="YoloV8" Version="4.1.7" />
 		<PackageReference Include="gong-wpf-dragdrop" Version="3.2.1" />
 	</ItemGroup>
@@ -151,45 +158,24 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="GameTask\OneDragon\" />
-	  <Folder Include="Service\Notification\Builder\" />
-	  <Folder Include="User\AutoPathing\" />
+		<Folder Include="GameTask\OneDragon\" />
+		<Folder Include="Service\Notification\Builder\" />
+		<Folder Include="User\AutoPathing\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Page Update="View\Windows\WelcomeDialog.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	    <XamlRuntime>Wpf</XamlRuntime>
-	    <SubType>Designer</SubType>
-	  </Page>
+		<Page Update="View\Windows\WelcomeDialog.xaml">
+			<Generator>MSBuild:Compile</Generator>
+			<XamlRuntime>Wpf</XamlRuntime>
+			<SubType>Designer</SubType>
+		</Page>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="View\Windows\WelcomeDialog.xaml.cs">
-	    <SubType>Code</SubType>
-	    <DependentUpon>WelcomeDialog.xaml</DependentUpon>
-	  </Compile>
-		<AssemblyVersion>0.43.0</AssemblyVersion>
-		<PackageReference Include="DeviceId" Version="6.8.0" />
-		<PackageReference Include="DeviceId.Windows" Version="6.8.0" />
-		<PackageReference Include="DeviceId.Windows.Wmi" Version="6.8.0" />
-		<PackageReference Include="Emoji.Wpf" Version="0.3.4" />
-		<PackageReference Include="Emgu.CV.runtime.windows" Version="4.10.0.5680" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Page Update="View\Windows\WelcomeDialog.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	    <XamlRuntime>Wpf</XamlRuntime>
-	    <SubType>Designer</SubType>
-	  </Page>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="View\Windows\WelcomeDialog.xaml.cs">
-	    <SubType>Code</SubType>
-	    <DependentUpon>WelcomeDialog.xaml</DependentUpon>
-	  </Compile>
+		<Compile Update="View\Windows\WelcomeDialog.xaml.cs">
+			<SubType>Code</SubType>
+			<DependentUpon>WelcomeDialog.xaml</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 </Project>
