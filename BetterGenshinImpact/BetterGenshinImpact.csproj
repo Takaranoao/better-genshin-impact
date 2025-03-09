@@ -43,10 +43,14 @@
 		<PackageReference Include="AvalonEdit" Version="6.3.0.90" />
 		<PackageReference Include="BehaviourTree" Version="1.0.73" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+<<<<<<< HEAD
 		<PackageReference Include="DeviceId" Version="6.8.0" />
 		<PackageReference Include="DeviceId.Windows" Version="6.8.0" />
 		<PackageReference Include="DeviceId.Windows.Wmi" Version="6.8.0" />
 		<PackageReference Include="Emoji.Wpf" Version="0.3.4" />
+=======
+		<PackageReference Include="Emgu.CV.runtime.windows" Version="4.10.0.5680" />
+>>>>>>> 2dede378 (添加Emgu.CV.runtime.windows包并移除OpenCvSharp4相关包)
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
@@ -55,9 +59,6 @@
 		<PackageReference Include="Microsoft.Toolkit.Uwp.Notifications" Version="7.1.3" />
 		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
 		<PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
-		<PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.8.0.20230708" />
-		<PackageReference Include="OpenCvSharp4.Extensions" Version="4.8.0.20230708" />
-		<PackageReference Include="OpenCvSharp4.Windows" Version="4.8.0.20230708" />
 		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.122" />
 		<PackageReference Include="Microsoft.ClearScript.V8" Version="7.4.5" />
 		<PackageReference Include="Microsoft.ClearScript.V8.Native.win-x64" Version="7.4.5" />
@@ -155,6 +156,27 @@
 	  <Folder Include="GameTask\OneDragon\" />
 	  <Folder Include="Service\Notification\Builder\" />
 	  <Folder Include="User\AutoPathing\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Update="View\Windows\WelcomeDialog.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	    <XamlRuntime>Wpf</XamlRuntime>
+	    <SubType>Designer</SubType>
+	  </Page>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="View\Windows\WelcomeDialog.xaml.cs">
+	    <SubType>Code</SubType>
+	    <DependentUpon>WelcomeDialog.xaml</DependentUpon>
+	  </Compile>
+		<AssemblyVersion>0.43.0</AssemblyVersion>
+		<PackageReference Include="DeviceId" Version="6.8.0" />
+		<PackageReference Include="DeviceId.Windows" Version="6.8.0" />
+		<PackageReference Include="DeviceId.Windows.Wmi" Version="6.8.0" />
+		<PackageReference Include="Emoji.Wpf" Version="0.3.4" />
+		<PackageReference Include="Emgu.CV.runtime.windows" Version="4.10.0.5680" />
 	</ItemGroup>
 
 	<ItemGroup>
