@@ -43,14 +43,12 @@
 		<PackageReference Include="AvalonEdit" Version="6.3.0.90" />
 		<PackageReference Include="BehaviourTree" Version="1.0.73" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-<<<<<<< HEAD
+		<PackageReference Include="Emgu.CV.Bitmap" Version="4.10.0.5680" />
 		<PackageReference Include="DeviceId" Version="6.8.0" />
 		<PackageReference Include="DeviceId.Windows" Version="6.8.0" />
 		<PackageReference Include="DeviceId.Windows.Wmi" Version="6.8.0" />
 		<PackageReference Include="Emoji.Wpf" Version="0.3.4" />
-=======
 		<PackageReference Include="Emgu.CV.runtime.windows" Version="4.10.0.5680" />
->>>>>>> 2dede378 (添加Emgu.CV.runtime.windows包并移除OpenCvSharp4相关包)
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
